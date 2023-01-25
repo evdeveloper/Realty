@@ -1,2 +1,38 @@
 footer { flex: 0 0 auto; }
 
+.footer {
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-top: 1px solid rgba(143, 149, 172, 0.2);
+    padding: 40px 0 90px;
+    @include media(769px) {
+      padding: 25px 0 40px;
+    }
+  }
+  &__address {
+    max-width: 290px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  &__phone {
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+    color: #2C2E3E;
+    @include media(1281px) {
+      font-size: 20px;
+      line-height: 26px;
+    }
+    @include media(769px) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+  &__write {
+    color: $red;
+    font-size: 14px;
+    border-bottom: 1px solid;
+  }
+}

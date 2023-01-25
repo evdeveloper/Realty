@@ -7,7 +7,62 @@ block variables
 
 
 block content
-
-
-
-
+  include modules/section/realty
+  include modules/section/gallery
+  .s-info
+    .container 
+      .info
+        .info__col
+          .progressbar(data-progress="5")
+            .progressbar__percent
+          .progressbar__inner
+            button(type="button" class="btn progressbar__btn" data-progress-btn="25")
+            p 
+              | При нажатии на кнопку прогрессбар заполняется на столько процентов, сколько указано на кнопке
+        .info__col
+          .info__text 
+            | Большинство онкологических пациентов испытывают страх перед неизвестностью того, что их ожидает в процессе лечения рака.
+          .more
+            .more__show
+              span Подробнее
+              +icon('arrow-down','more__icon')
+            .more__text 
+              | Большинство онкологических пациентов испытывают страх перед неизвестностью того, что их ожидает в процессе лечения рака.
+  .s-maps
+    .container
+      .maps#maps
+  .s-advantage
+    .container
+      .advantage
+        .advantage__item
+          .advantage__count
+            | 3,000
+          .advantage__text
+            | Агенств
+        .advantage__item
+          .advantage__count
+            | 10,000
+          .advantage__text
+            | Партнеров
+        .advantage__item
+          .advantage__count
+            | 80,000
+          .advantage__text
+            | Квартир в базе
+        .advantage__item
+          .advantage__count
+            | 100+
+          .advantage__text
+            | Застройщиков
+        .advantage__item
+          .advantage__count
+            | 200
+          .advantage__text
+            | Сотрудников
+  .up-button
+    .container
+      .up-button__inner
+        .up-button__btn(data-scroll-element="top")
+          span Наверх
+          .up-button__circle
+            +icon('arrow-up','up-button__icon')

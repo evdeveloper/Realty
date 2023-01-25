@@ -1,0 +1,37 @@
+section.s-realty 
+  .container
+    .realty
+      .realty__col
+        h1 
+          | Недвижимость 
+          br
+          | Санкт-Петербурга 
+          br 
+          | и Москвы
+        form.realtyForm(action="/")
+          .realtyForm__inner 
+            .realtyForm__item
+              label Выбрать город
+              select(data-custom-select-class="select")
+                option(value="") Выбрать город
+                option(value="moskov") Москва
+                option(value="spb") Санкт-Петербург
+                option(value="vladivostok") Владивосток
+                option(value="orenburg") Оренбург
+              
+              
+            .realtyForm__item
+              label(for="email") Ваш e-mail
+              input(type="email" name="email" id="email" placeholder="info@mail.ru")
+          button(type="submit" class="btn") Кнопка действия
+          .realtyForm__policy 
+            input(type="checkbox" name="policy" checked id="policy")
+            label(for="policy")
+              +icon('check','realtyForm__check')
+              span
+                | Отправляя нам данную форму вы соглашаетесь с 
+                br
+                a(href="#" target="_blank") политикой конфиденциальности
+      .realty__col
+        .realty__picture
+          img(src="static/images/img/picture.svg"  alt="Миниатюра")

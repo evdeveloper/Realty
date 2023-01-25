@@ -18,7 +18,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const createBaseHTML = (value, className) => (`
     <div class="${className}">
       <button class="${className}__toggle" type="button">${value}</button>
-      <div class="${className}__options"></div>
+      <ul class="${className}__options"></ul>
+      <svg class="svg-sprite-icon  icon-arrow-down select__icon">
+        <use xlink:href="static/images/svg/symbol/sprite.svg#arrow-down"></use>
+      </svg>
     </div>
   `);
   
@@ -33,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const activeClassName = index === active ? `${className}__option--active` : '';
     return `
       ${html}
-      <button class="${className}__option ${activeClassName}" type="button" data-index="${index}">${option.textContent}</button>
+      <li class="${className}__option ${activeClassName}" data-index="${index}">${option.textContent}</li>
     `;
   };
   

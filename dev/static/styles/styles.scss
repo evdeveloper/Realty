@@ -13,6 +13,7 @@ body {
   font-family: $base-fonts;
   padding: 0;
   margin: 0;
+  color: #2C2E3E;
 }
 
 .wrapper {
@@ -22,6 +23,23 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 { margin: 0; }
+
+h1 {
+  font-size: 48px;
+  line-height: 55px;
+  @include media(1281px) {
+    font-size: 42px;
+    line-height: 50px;
+  }
+  @include media(769px) {
+    font-size: 30px;
+    line-height: 35px;
+  }
+}
+
+img {
+  max-width: 100%;
+}
 
 ul, li {
   list-style-type: none;
@@ -56,8 +74,15 @@ button { outline: none; border: none; background-color: transparent; }
 
 .container {
   width: 100%;
+  max-width: 1250px;
   margin: 0 auto;
   padding: 0 15px;
+  @include media(1281px) {
+    max-width: 1030px;
+  }
+  @include media(769px) {
+    max-width: 630px;
+  }
 }
 
 //Модули

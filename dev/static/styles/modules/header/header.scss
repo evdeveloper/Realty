@@ -1,0 +1,128 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: #2C2E3E;
+  padding: 0 65px;
+  &__logo {
+    @include media(1100px) {
+      max-width: 60px;
+    }
+  }
+  @include media(1281px) {
+    padding: 0 40px;
+  }
+  @include media(769px) {
+    padding: 0 20px;
+  }
+}
+
+.navigation {
+  $this: &;
+
+  display: flex;
+  gap: 70px;
+  @include media(1100px) {
+    width: 75%;
+    gap: 0;
+    justify-content: space-between;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    height: 80px;
+    @include media(769px) {
+      height: 60px;
+    }
+  }
+  &__icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 9px;
+    height: 5px;
+    fill: $white;
+  }
+  &__link {
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 100px;
+    transition: all .3s;
+    color: $white;
+    font-weight: bold;
+    @include media(1281px) {
+      font-size: 14px;
+    }
+    &:hover {
+      background-color: rgba(143, 149, 172, 0.2);
+    }
+    &:active,
+    &.active {
+      background: #FF2D23;
+    }
+    &#{$this}--down {
+      padding-right: 35px;
+      &.active {
+        & + .nav-dropdown {
+          opacity: 1;
+          visibility: visible;
+          pointer-events: all;
+          transform: translateY(-13px);
+        }
+        #{$this}__icon {
+          transform: translateY(-50%) rotate(-180deg);
+        }
+      }
+    }
+  }
+}
+
+.nav-dropdown {
+  width: 535px;
+  position: absolute;
+  z-index: 999;
+  left: 0;
+  top: calc(100% + 20px);
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s;
+  background: #2C2E3E;
+  border-radius: 9px;
+  padding: 24px 20px 24px 30px;
+  &__line {
+    display: flex;
+    gap: 40px;
+    &:not(:last-child) {
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(143, 149, 172, 0.2);
+      margin-bottom: 20px;
+    }
+  }
+  &__link {
+    position: relative;
+    padding-left: 32px;
+    color: $white;
+    &:hover {
+      strong {
+        color: #FF2D23;
+      }
+    }
+    img {
+      position: absolute;
+      left: 0;
+      top: 3px;
+    }
+    strong {
+      transition: color .3s;
+    }
+    p {
+      color: #8F95AC;
+      font-size: 14px;
+    }
+  }
+}

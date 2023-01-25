@@ -19,13 +19,14 @@ html(lang="ru-RU")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js")
     <![endif]-->
   body(class=pageClass)
-    .wrapper
+    .wrapper#top
       include ../modules/header/header
       main.content
         block content
       include ../modules/footer/footer
     
 
+    script(src="https://api-maps.yandex.ru/2.1/?apikey=45aaa334-867f-412f-a099-16c9d9ca09cb&lang=ru_RU")
     script(src="static/js/libs.min.js")
     script(src="static/js/select.js")
     script(src="static/js/main.js")

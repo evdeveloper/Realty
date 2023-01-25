@@ -1,5 +1,44 @@
-
-
+header.header
+  .header__logo.logo 
+    img(src="static/images/img/logo.svg"  alt="ПАН")
+  nav.navigation
+    .navigation__item
+      .navigation__link.navigation--down.js-menu-open
+        | Пункт 1
+        +icon('arrow-down','navigation__icon')
+      .nav-dropdown
+        .nav-dropdown__line
+          a(href="#").nav-dropdown__link
+            img(src="static/images/img/item.svg"  alt="Меню")
+            strong Меню 1
+            p Покупайте и продавайте
+          a(href="#").nav-dropdown__link
+            img(src="static/images/img/item.svg"  alt="Меню")
+            strong Меню 2
+            p Покупайте и продавайте
+        .nav-dropdown__line
+          a(href="#").nav-dropdown__link
+            img(src="static/images/img/item.svg"  alt="Меню")
+            strong Меню 3
+            p Покупайте и продавайте
+          a(href="#").nav-dropdown__link
+            img(src="static/images/img/item.svg"  alt="Меню")
+            strong Меню 4
+            p Покупайте и продавайте
+    .navigation__item
+      a(href="#").navigation__link
+        | Пункт 2
+    .navigation__item
+      a(href="#").navigation__link
+        | Пункт 3
+    .navigation__item
+      a(href="#").navigation__link
+        | Пункт 4
+    .navigation__item
+      a(href="#").navigation__link
+        | Пункт 5
+  button(type="button" class="btn header--btn")
+    | Кнопка
 
 
 

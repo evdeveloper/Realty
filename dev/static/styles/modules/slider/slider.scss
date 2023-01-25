@@ -1,0 +1,75 @@
+.swiperGallery {
+  $this: &;
+
+  overflow: unset;
+  #{$this}__dots {
+    margin-top: 50px;
+    text-align: center;
+    .swiper-pagination-bullet {
+      @include size(7px);
+      margin: 0 8px;
+      background-color: #8F95AC;
+      &.swiper-pagination-bullet-active {
+        background-color: $red;
+      }
+    }
+  }
+  &__slide {
+    width: 470px;
+    border-radius: 5px;
+    overflow: hidden;
+    .rating {
+      position: absolute;
+      left: 42px;
+      bottom: 30px;
+    }
+  }
+  &__arrows {
+    width: calc(100% + 50px);
+    position: absolute;
+    left: 50%;
+    top: calc(50% - 40px);
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+  }
+  &__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: all;
+    @include size(50px);
+    cursor: pointer;
+    background-color: $white;
+    box-shadow: 0px 4px 20px rgba(143, 149, 172, 0.2);
+    border-radius: 100%;
+    &.swiper-button-disabled {
+      opacity: 0.7;
+    }
+  }
+  &__icon {
+    width: 6px;
+    height: 11px;
+  }
+}
+
+.rating {
+  $this: &;
+
+  display: flex;
+  gap: 7px;
+  &__item {
+    cursor: pointer;
+    &.active {
+      #{$this}__icon {
+        fill: $red;
+      }
+    }
+  }
+  &__icon {
+    @include size(22px);
+    fill: $white;
+  }
+}

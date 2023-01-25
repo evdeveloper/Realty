@@ -1,0 +1,257 @@
+.s-info {
+  padding: 60px 0;
+}
+
+.s-maps {
+  padding: 60px 0 40px;
+}
+
+.maps {
+  width: 100%;
+  height: 500px;
+  background: rgba(143, 149, 172, 0.08);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  &__col {
+    flex: 1;
+    &:first-child {
+      flex: 0 0 calc(40% - 75px);
+    }
+    &:last-child {
+      flex: 0 0 calc(60% - 75px);
+    }
+  }
+  &__text {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 34px;
+    margin-bottom: 15px;
+  }
+}
+
+.progressbar {
+  width: 100%;
+  position: relative;
+  height: 40px;
+  background-color: rgba(143, 149, 172, 0.1);
+  border-radius: 100px;
+  margin-bottom: 40px;
+  &__percent {
+    min-width: 95px;
+    width: 5%;
+    font-weight: bold;
+    color: $white;
+    text-align: center;
+    line-height: 40px;
+    position: absolute;
+    transition: all .3s;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #2C2E3E;
+    border-radius: 100px;
+  }
+  &__inner {
+    display: flex;
+    gap: 30px;
+    p {
+      font-size: 14px;
+      line-height: 18px;
+    }
+    .btn {
+      width: 180px;
+      flex: 0 0 180px;
+    }
+  }
+}
+
+.more {
+  $this: &;
+
+  font-size: 14px;
+  &__show {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #8F95AC;
+    cursor: pointer;
+    &.active {
+      #{$this}__icon {
+        transform: scale(-1);
+      }
+      & + #{$this}__text {
+        position: static;
+        visibility: visible;
+        pointer-events: all;
+        opacity: 1;
+      }
+    }
+  }
+  &__icon {
+    width: 8px;
+    height: 4px;
+    fill: #8F95AC;
+  }
+  &__text {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity .3s;
+    margin-top: 10px;
+    line-height: 18px;
+  }
+}
+
+.s-advantage {
+  padding: 40px 0 30px;
+}
+
+.advantage {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+  @include media(1281px) {
+    gap: 20px;
+  }
+  @include media(769px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  &__item {
+    box-shadow: 0px 0px 15px rgba(143, 149, 172, 0.15);
+    border-radius: 5px;
+    background-color: $white;
+    padding: 38px 15px 34px 30px;
+    transition: all .3s;
+    &:hover {
+      box-shadow: 0px 0px 20px rgba(143, 149, 172, 0.4);
+    }
+    @include media(1281px) {
+      padding: 28px 15px 28px 25px;
+    }
+    @include media(769px) {
+      padding: 25px 15px 25px 20px;
+    }
+  }
+  &__count {
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 40px;
+    margin-bottom: 4px;
+    @include media(1281px) {
+      font-size: 30px;
+      line-height: 35px;
+    }
+    @include media(769px) {
+      font-size: 28px;
+      line-height: 33px;
+    }
+  }
+  &__text {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 34px;
+    @include media(1281px) {
+      font-size: 18px;
+      line-height: 26px;
+    }
+    @include media(769px) {
+      font-size: 15px;
+      line-height: 22px;
+    }
+  }
+}
+
+.up-button {
+  padding: 30px 0 20px;
+  &__inner {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  &__circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include size(30px);
+    border-radius: 100%;
+    background-color: #2C2E3E;
+  }
+  &__icon {
+    width: 7px;
+    height: 4px;
+    fill: $white;
+  }
+}
+
+ymaps.ymaps-2-1-79-balloon__content {
+  padding: 0;
+}
+
+ymaps.ymaps-2-1-79-balloon__close + ymaps.ymaps-2-1-79-balloon__content {
+  margin-right: 0;
+}
+
+ymaps.ymaps-2-1-79-balloon {
+  border-radius: 5px;
+  box-shadow: 0px 4px 20px rgba(143, 149, 172, 0.2)!important;
+}
+
+ymaps.ymaps-2-1-79-balloon__close {
+  display: none;
+}
+
+ymaps.ymaps-2-1-79-balloon__tail {
+  left: -1px;
+  width: 0;
+  height: 0;
+  margin-bottom: 0;
+  background: none;
+}
+
+ymaps.ymaps-2-1-79-balloon_to_top .ymaps-2-1-79-balloon__tail {
+  transform: none;
+}
+
+ymaps.ymaps-2-1-79-balloon__tail:after {
+  width: 0;
+	height: 0;
+	border-width: 40px 40px 0 0;
+	border-color: $white transparent transparent transparent;
+	border-style: solid;
+  background-color: transparent;
+  bottom: auto;
+}
+
+.balloon {
+  font-family: $base-fonts;
+  padding: 30px 20px 30px 50px;
+  color: #2C2E3E;
+  &__header {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  &__address {
+    max-width: 210px;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 10px;
+  }
+  &__scheme {
+    font-size: 14px;
+    border-bottom: 1px solid;
+    color: #FF2D23;
+  }
+}
