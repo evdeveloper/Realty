@@ -15,6 +15,9 @@ footer { flex: 0 0 auto; }
     max-width: 290px;
     font-size: 14px;
     line-height: 18px;
+    @include media(769px) {
+      max-width: 190px;
+    }
   }
   &__phone {
     font-weight: bold;
@@ -24,6 +27,7 @@ footer { flex: 0 0 auto; }
     @include media(1281px) {
       font-size: 20px;
       line-height: 26px;
+      margin-left: -20%;
     }
     @include media(769px) {
       font-size: 18px;

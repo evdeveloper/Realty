@@ -26,7 +26,7 @@
         flex: 0 0 590px;
       }
       @include media(769px) {
-        flex: 1;
+        flex: 0 0 300px;
       }
     }
   }
@@ -48,9 +48,16 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
+  @include media(769px) {
+    gap: 30px;
+  }
   &__inner {
     display: flex;
     gap: 30px;
+    @include media(769px) {
+      flex-wrap: wrap;
+      gap: 20px;
+    }
   }
   &__policy {
     input {

@@ -75,8 +75,20 @@ document.addEventListener('DOMContentLoaded', () => {
   // Swiper Gallery
   swiperGallery.forEach((slider, index) => {
     const sliderGallery = new Swiper(slider, {
-      spaceBetween: 30,
       slidesPerView: 'auto',
+      breakpoints: {
+        320: {
+          slidesPerView: 'auto',
+          spaceBetween: 16,
+        },
+        769: {
+          spaceBetween: 20,
+        },
+        1281: {
+          slidesPerView: 'auto',
+          spaceBetween: 30
+        }
+      },
       navigation: {
         nextEl: '.swiperGallery__next',
         prevEl: '.swiperGallery__prev',

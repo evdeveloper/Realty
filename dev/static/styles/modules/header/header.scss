@@ -28,6 +28,9 @@
     gap: 0;
     justify-content: space-between;
   }
+  @include media(769px) {
+    width: 65%;
+  }
   &__item {
     display: flex;
     align-items: center;
@@ -53,9 +56,13 @@
     border-radius: 100px;
     transition: all .3s;
     color: $white;
+    user-select: none;
     font-weight: bold;
     @include media(1281px) {
       font-size: 14px;
+    }
+    @include media(769px) {
+      padding: 10px;
     }
     &:hover {
       background-color: rgba(143, 149, 172, 0.2);

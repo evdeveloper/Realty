@@ -5,6 +5,12 @@
   #{$this}__dots {
     margin-top: 50px;
     text-align: center;
+    @include media(1281px) {
+      margin-top: 40px;
+    }
+    @include media(769px) {
+      margin-top: 30px;
+    }
     .swiper-pagination-bullet {
       @include size(7px);
       margin: 0 8px;
@@ -18,10 +24,20 @@
     width: 470px;
     border-radius: 5px;
     overflow: hidden;
+    @include media(1281px) {
+      width: 390px;
+    }
+    @include media(769px) {
+      width: 230px;
+    }
     .rating {
       position: absolute;
       left: 42px;
       bottom: 30px;
+      @include media(769px) {
+        left: 22px;
+        bottom: 18px;
+      }
     }
   }
   &__arrows {
@@ -34,6 +50,12 @@
     display: flex;
     justify-content: space-between;
     pointer-events: none;
+    @include media(1281px) {
+      top: calc(50% - 35px);
+    }
+    @include media(769px) {
+      top: calc(50% - 28px);
+    }
   }
   &__arrow {
     display: flex;
@@ -60,6 +82,9 @@
 
   display: flex;
   gap: 7px;
+  @include media(769px) {
+    gap: 5px;
+  }
   &__item {
     cursor: pointer;
     &.active {
@@ -71,5 +96,8 @@
   &__icon {
     @include size(22px);
     fill: $white;
+    @include media(769px) {
+      @include size(17px);
+    }
   }
 }
