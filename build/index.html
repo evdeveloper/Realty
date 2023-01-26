@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <title>Главная страница</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="color-theme" content="">
+    <link rel="stylesheet" type="text/css" href="static/css/styles.min.css"><!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
+  </head>
+  <body class="index-page">
+    <div class="wrapper" id="top">
+      <header class="header">
+        <div class="header__logo logo"> <img src="static/images/img/logo.svg" alt="ПАН"></div>
+        <nav class="navigation">
+          <div class="navigation__item">
+            <div class="navigation__link navigation--down js-menu-open">Пункт 1
+              <svg class="svg-sprite-icon  icon-arrow-down navigation__icon">
+                <use xlink:href="static/images/svg/symbol/sprite.svg#arrow-down"></use>
+              </svg>
+            </div>
+            <div class="nav-dropdown">
+              <div class="nav-dropdown__line"><a class="nav-dropdown__link" href="#"><img src="static/images/img/item.svg" alt="Меню"><strong>Меню 1</strong>
+                  <p>Покупайте и продавайте</p></a><a class="nav-dropdown__link" href="#"><img src="static/images/img/item.svg" alt="Меню"><strong>Меню 2</strong>
+                  <p>Покупайте и продавайте</p></a></div>
+              <div class="nav-dropdown__line"><a class="nav-dropdown__link" href="#"><img src="static/images/img/item.svg" alt="Меню"><strong>Меню 3</strong>
+                  <p>Покупайте и продавайте</p></a><a class="nav-dropdown__link" href="#"><img src="static/images/img/item.svg" alt="Меню"><strong>Меню 4</strong>
+                  <p>Покупайте и продавайте</p></a></div>
+            </div>
+          </div>
+          <div class="navigation__item"><a class="navigation__link" href="#">Пункт 2</a></div>
+          <div class="navigation__item"><a class="navigation__link" href="#">Пункт 3</a></div>
+          <div class="navigation__item"><a class="navigation__link" href="#">Пункт 4</a></div>
+          <div class="navigation__item"><a class="navigation__link" href="#">Пункт 5</a></div>
+        </nav>
+        <button class="btn header--btn" type="button">Кнопка</button>
+      </header>
+      <main class="content">
+        <section class="s-realty"> 
+          <div class="container">
+            <div class="realty">
+              <div class="realty__col">
+                <h1>
+                   Недвижимость <br>Санкт-Петербурга <br>и Москвы</h1>
+                <form class="realtyForm" action="/">
+                  <div class="realtyForm__inner"> 
+                    <div class="realtyForm__item">
+                      <label>Выбрать город</label>
+                      <select data-custom-select-class="select">
+                        <option value="">Выбрать город</option>
+                        <option value="moskov">Москва</option>
+                        <option value="spb">Санкт-Петербург</option>
+                        <option value="vladivostok">Владивосток</option>
+                        <option value="orenburg">Оренбург</option>
+                      </select>
+                    </div>
+                    <div class="realtyForm__item">
+                      <label for="email">Ваш e-mail</label>
+                      <input type="email" name="email" id="email" placeholder="info@mail.ru">
+                    </div>
+                  </div>
+                  <button class="btn" type="submit">Кнопка действия</button>
+                  <div class="realtyForm__policy"> 
+                    <input type="checkbox" name="policy" checked id="policy">
+                    <label for="policy">
+                      <svg class="svg-sprite-icon  icon-check realtyForm__check">
+                        <use xlink:href="static/images/svg/symbol/sprite.svg#check"></use>
+                      </svg><span>Отправляя нам данную форму вы соглашаетесь с <a href="#" target="_blank">политикой конфиденциальности</a></span>
+                    </label>
+                  </div>
+                </form>
+              </div>
+              <div class="realty__col">
+                <div class="realty__picture"><img src="static/images/img/picture.svg" alt="Миниатюра"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="s-gallery"> 
+          <div class="container"> 
+            <h1>Обычный слайдер</h1>
+            <div class="gallery"> 
+              <div class="swiper swiperGallery">
+                <div class="swiper-wrapper swiperGallery__inner">
+                  <div class="swiper-slide swiperGallery__slide"><img src="static/images/img/slider/1.jpg" alt="Slide">
+                    <div class="rating">
+                      <div class="rating__item active">
+                        <svg class="svg-sprite-icon  icon-star rating__icon">
+                          <use xlink:href="static/images/svg/symbol/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                      <div class="rating__item active">
+                        <svg class="svg-sprite-icon  icon-star rating__icon">
+                          <use xlink:href="static/images/svg/symbol/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                      <div class="rating__item active">
+                        <svg class="svg-sprite-icon  icon-star rating__icon">
+                          <use xlink:href="static/images/svg/symbol/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                      <div class="rating__item">
+                        <svg class="svg-sprite-icon  icon-star rating__icon">
+                          <use xlink:href="static/images/svg/symbol/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                      <div class="rating__item">
+                        <svg class="svg-sprite-icon  icon-star rating__icon">
+                          <use xlink:href="static/images/svg/symbol/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide swiperGallery__slide"><img src="static/images/img/slider/2.jpg" alt="Slide">
+                    <div class="rating">
+                      <div class="rating__item active">
+                        <svg class="svg-sprite-icon  icon-star rating__icon">
+                          <use xlink:href="static/images/svg/symbol/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                      <div class="rating__item active">
+                        <svg class="svg-sprite-icon  icon-star rating__icon">
+                          <use xlink:href="static/images/svg/symbol/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                      <div class="rating__item">
+                        <svg class="svg-sprite-icon  icon-star rating__icon">
+                          <use xlink:href="static/images/svg/symbol/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                      <div class="rating__item">
+                        <svg class="svg-sprite-icon  icon-star rating__icon">
+                          <use xlink:href="static/images/svg/symbol/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                      <div class="rating__item">
+                        <svg class="svg-sprite-icon  icon-star rating__icon">
+                          <use xlink:href="static/images/svg/symbol/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide swiperGallery__slide"><img src="static/images/img/slider/1.jpg" alt="Slide">
+                    <div class="rating">
+                      <div class="rating__item active">
+                        <svg class="svg-sprite-icon  icon-star rating__icon">
+                          <use xlink:href="static/images/svg/symbol/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                      <div class="rating__item">
+                        <svg class="svg-sprite-icon  icon-star rating__icon">
+                          <use xlink:href="static/images/svg/symbol/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                      <div class="rating__item">
+                        <svg class="svg-sprite-icon  icon-star rating__icon">
+                          <use xlink:href="static/images/svg/symbol/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                      <div class="rating__item">
+                        <svg class="svg-sprite-icon  icon-star rating__icon">
+                          <use xlink:href="static/images/svg/symbol/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                      <div class="rating__item">
+                        <svg class="svg-sprite-icon  icon-star rating__icon">
+                          <use xlink:href="static/images/svg/symbol/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide swiperGallery__slide"><img src="static/images/img/slider/2.jpg" alt="Slide">
+                    <div class="rating">
+                      <div class="rating__item">
+                        <svg class="svg-sprite-icon  icon-star rating__icon">
+                          <use xlink:href="static/images/svg/symbol/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                      <div class="rating__item">
+                        <svg class="svg-sprite-icon  icon-star rating__icon">
+                          <use xlink:href="static/images/svg/symbol/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                      <div class="rating__item">
+                        <svg class="svg-sprite-icon  icon-star rating__icon">
+                          <use xlink:href="static/images/svg/symbol/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                      <div class="rating__item">
+                        <svg class="svg-sprite-icon  icon-star rating__icon">
+                          <use xlink:href="static/images/svg/symbol/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                      <div class="rating__item">
+                        <svg class="svg-sprite-icon  icon-star rating__icon">
+                          <use xlink:href="static/images/svg/symbol/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide swiperGallery__slide"><img src="static/images/img/slider/1.jpg" alt="Slide">
+                    <div class="rating">
+                      <div class="rating__item active">
+                        <svg class="svg-sprite-icon  icon-star rating__icon">
+                          <use xlink:href="static/images/svg/symbol/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                      <div class="rating__item active">
+                        <svg class="svg-sprite-icon  icon-star rating__icon">
+                          <use xlink:href="static/images/svg/symbol/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                      <div class="rating__item active">
+                        <svg class="svg-sprite-icon  icon-star rating__icon">
+                          <use xlink:href="static/images/svg/symbol/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                      <div class="rating__item">
+                        <svg class="svg-sprite-icon  icon-star rating__icon">
+                          <use xlink:href="static/images/svg/symbol/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                      <div class="rating__item">
+                        <svg class="svg-sprite-icon  icon-star rating__icon">
+                          <use xlink:href="static/images/svg/symbol/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiperGallery__dots"></div>
+                <div class="swiperGallery__arrows">
+                  <div class="swiperGallery__arrow swiperGallery__next">
+                    <svg class="svg-sprite-icon  icon-arrow-left swiperGallery__icon">
+                      <use xlink:href="static/images/svg/symbol/sprite.svg#arrow-left"></use>
+                    </svg>
+                  </div>
+                  <div class="swiperGallery__arrow swiperGallery__prev">
+                    <svg class="svg-sprite-icon  icon-arrow-right swiperGallery__icon">
+                      <use xlink:href="static/images/svg/symbol/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="s-info">
+          <div class="container"> 
+            <div class="info">
+              <div class="info__col">
+                <div class="progressbar" data-progress="5">
+                  <div class="progressbar__percent"></div>
+                </div>
+                <div class="progressbar__inner">
+                  <button class="btn progressbar__btn" type="button" data-progress-btn="25"></button>
+                  <p>
+                     При нажатии на кнопку прогрессбар заполняется на столько процентов, сколько указано на кнопке</p>
+                </div>
+              </div>
+              <div class="info__col">
+                <div class="info__text">
+                   Большинство онкологических пациентов испытывают страх перед неизвестностью того, что их ожидает в процессе лечения рака.</div>
+                <div class="more">
+                  <div class="more__show"><span>Подробнее</span>
+                    <svg class="svg-sprite-icon  icon-arrow-down more__icon">
+                      <use xlink:href="static/images/svg/symbol/sprite.svg#arrow-down"></use>
+                    </svg>
+                  </div>
+                  <div class="more__text">
+                     Большинство онкологических пациентов испытывают страх перед неизвестностью того, что их ожидает в процессе лечения рака.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="s-maps">
+          <div class="container">
+            <div class="maps" id="maps"></div>
+          </div>
+        </div>
+        <div class="s-advantage">
+          <div class="container">
+            <div class="advantage">
+              <div class="advantage__item">
+                <div class="advantage__count">3,000</div>
+                <div class="advantage__text">Агенств</div>
+              </div>
+              <div class="advantage__item">
+                <div class="advantage__count">10,000</div>
+                <div class="advantage__text">Партнеров</div>
+              </div>
+              <div class="advantage__item">
+                <div class="advantage__count">80,000</div>
+                <div class="advantage__text">Квартир в базе</div>
+              </div>
+              <div class="advantage__item">
+                <div class="advantage__count">100+</div>
+                <div class="advantage__text">Застройщиков</div>
+              </div>
+              <div class="advantage__item">
+                <div class="advantage__count">200</div>
+                <div class="advantage__text">Сотрудников</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="up-button">
+          <div class="container">
+            <div class="up-button__inner">
+              <div class="up-button__btn" data-scroll-element="top"><span>Наверх</span>
+                <div class="up-button__circle">
+                  <svg class="svg-sprite-icon  icon-arrow-up up-button__icon">
+                    <use xlink:href="static/images/svg/symbol/sprite.svg#arrow-up"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__inner">
+            <div class="footer__address">
+               Санкт-Петербург, Владимирский пр., д. 3 лит. А, офис 701</div><a class="footer__phone" href="tel:+78124456809">+ 7 (812) 445-68-09</a><a class="footer__write" href="#">Напишите нам </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=45aaa334-867f-412f-a099-16c9d9ca09cb&amp;lang=ru_RU"></script>
+    <script src="static/js/libs.min.js"></script>
+    <script src="static/js/select.js"></script>
+    <script src="static/js/main.js"></script>
+  </body>
+</html>
